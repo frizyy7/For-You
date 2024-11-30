@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #fce4ec;
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        h1 { 
+            color: #e91e63; 
+        }
+        #hiddenMessage {
+            font-size: 18px;
+            display: none; /* Disembunyikan secara default */
+            margin-top: 10px;
+        }
+        .stiker {
+            width: 150px;  /* Atur ukuran gambar */
+            margin-top: 20px;
+            margin-bottom: 50px;
+        }
+        .button {
+            background-color: #e91e63;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .button:hover { 
+            background-color: #c2185b; 
+        }
+        .judul{
+            text-align: center;
+        }
+        .gallery, .video-container, .form-container {
+            display: none; /* Disembunyikan awalnya */
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .gallery img {
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            border-radius: 10px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+        .video-container video {
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            text-align: left;
+            width: 80%;
+            max-width: 400px;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            background-color: #e91e63;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #c2185b;
+        }
+    </style>
+</head>
+<body>
+    <audio id="backgroundMusic" autoplay loop>
+        <source src="Keep On Loving You - Cigarettes After Sex.mp3" type="audio/mp3"> 
+        Browser kamu tidak mendukung pemutar audio.
+    </audio>
+    <h1>Hallo, Fijanatin Akhmalia🩵🩵</h1>
+    <h2>Liat pesanya dong</h2>
+    
+    <div id="hiddenMessage">
+        <p>Haii, sebenarnya aku juga ada rasa pas todays hehehe,  </p>
+        <img id="first_stiker" class="stiker" src="https://feeldreams.github.io/bunga.gif" alt="Stiker Bunga"/>
+   
+
+    <!-- Galeri Foto -->
+    <div class="gallery" id="gallery">
+        <img src="img.jpeg" alt="Momen 1">
+        <img src="img2.jpeg" alt="Momen 2">
+        <img src="img3.jpeg" alt="Momen 3">
+    </div>
+
+    <!-- Tempat Video -->
+    <div class="video-container" id="videoContainer">
+        <video controls>
+            <source src="shortvideo.mp4" type="video/mp4">
+            Browser kamu tidak mendukung video.
+        </video>
+    </div>
+
+    <h2 class="judul">Do you want to be my girlfriend?</h2>
+
+</div>
+
+    <!-- Formulir Balasan -->
+    <div class="form-container" id="formContainer">
+        <form action="https://formspree.io/f/your-form-id" method="POST"> 
+            <label for="message">Mau kah kamu pijaa??</label>
+            <textarea name="message" id="message" rows="5" placeholder="Tulis balasan di sini..." required></textarea>
+            <label for="message">Alasan knp kamu suka aku? heheh:</label>
+            <textarea name="message" id="message" rows="5" placeholder="Tulis balasan di sini..." required></textarea>
+            <button type="submit">Kirim Balasan</button>
+        </form>
+    </div>
+
+    <div class="button" onclick="showContent()">Lihat Pesan</div>
+
+    <script>
+        document.getElementById('backgroundMusic').volume = 0.5;
+        function showContent() {
+            document.getElementById("hiddenMessage").style.display = "block";
+            document.getElementById("gallery").style.display = "flex";
+            document.getElementById("videoContainer").style.display = "block";
+            document.getElementById("formContainer").style.display = "block";
+        }
+    </script>
+</body>
+</html>
